@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<SiteDataExport>
+	<Order UID="35753dba-51f9-11e8-a23c-d0946606ab89" ElementDeleted="no" Partner="АШАН" PartnerUID="caacb6fd-f46c-11e7-b64b-3464a931ea12" Contractor="АШАН /Ростов" ContractorUID="caacb706-f46c-11e7-b64b-3464a931ea12" Manager="Назаренко_Юрий " ManagerUID="dc108899-f6d3-11e7-a229-d0946606ab89" OrderNumber="ТЛ1-056447 " ShippingDate="2018-05-11 00:00:00" OrderCreationDate="2018-05-07 16:19:03" OrderModificationDate="2018-05-07 16:19:03" GruzAddress="ООО &quot;АШАН&quot;, 141031, Московская обл, Мытищи г, Осташковское ш, дом № 1" OrderStatus="Заказ создан" OrderTotalSum="121923,55" OrderTotalUnit="4210" OrderTotalBox="38,33"/>
+</SiteDataExport>

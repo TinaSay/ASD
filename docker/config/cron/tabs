@@ -1,0 +1,5 @@
+LANG=ru_RU.UTF-8
+
+# * * * * * /usr/local/bin/php /var/www/html/framework/yii
+*/15 * * * * /usr/local/bin/php /var/www/html/framework/yii search
+# 0 * * * * /usr/local/bin/php /var/www/html/framework/yii product/import

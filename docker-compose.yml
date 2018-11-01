@@ -1,0 +1,63 @@
+version: '3'
+services:
+    app:
+        image: ${IMAGE_APP_NAME}
+        container_name: ${CONTAINER_NAME}
+        environment:
+            - APACHE_RUN_ID=${APACHE_RUN_ID}
+            - APACHE_RUN_USER=${APACHE_RUN_USER}
+            - APACHE_RUN_GROUP=${APACHE_RUN_GROUP}
+        volumes:
+            - ./:/var/www
+            - ./docker/server/log:/var/log/apache2
+            - ./docker/server/supervisor:/var/log/supervisor
+            - ./docker/config/cron:/root/cron
+            - ./docker/config/php/php.ini:/usr/local/etc/php/php.ini
+            - ./docker/config/supervisor/daemon.conf:/etc/supervisor/conf.d/daemon.conf
+        expose:
+            - 9000
+        networks:
+            self:
+                ipv4_address: ${NETWORK_APP}
+    redis:
+        image: redis:3.2
+        networks:
+            self:
+                ipv4_address: ${NETWORK_REDIS}
+    mysql:
+        image: mysql:5.7
+        environment:
+            MYSQL_USER: ${MYSQL_USER}
+            MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+            MYSQL_DATABASE: ${MYSQL_DATABASE}
+            MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+        volumes:
+            - ./docker/server/mysql:/var/lib/mysql
+            - ./docker/config/mysql/my.cnf:/etc/mysql/conf.d/my.cnf
+        networks:
+            self:
+                ipv4_address: ${NETWORK_MYSQL}
+    phpmyadmin:
+        image: phpmyadmin/phpmyadmin:latest
+        links:
+            - mysql:mysql
+        environment:
+            PMA_HOST: mysql
+        volumes:
+            - ./docker/config/phpmyadmin/config.user.inc.php:/etc/phpmyadmin/config.user.inc.php
+        networks:
+            self:
+                ipv4_address: ${NETWORK_PHPMYADMIN}
+    sphinx:
+        image: nsign/sphinx-docker:2.2.11
+        volumes:
+            - ./docker/config/sphinx/sphinx.conf:/etc/sphinxsearch/sphinx.conf
+        networks:
+            self:
+                ipv4_address: ${NETWORK_SPHINX}
+networks:
+    self:
+        driver: bridge
+        ipam:
+            config:
+                - subnet: ${NETWORK_SUBNET}

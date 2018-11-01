@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<SiteDataExport LogInAllowed="yes" UID="301c4a31-52c7-11e8-a231-000c29e5886d" ElementDeleted="no" FIO="Тестовый пользователь" Partner="АШАН" PartnerUID="caacb6fd-f46c-11e7-b64b-3464a931ea12" Manager="Баева_Ирина " ManagerUID="832b83c4-f6d4-11e7-a229-d0946606ab89" Debt="-4652188,71">
+	<ManagerContacts>
+		<Contact Type="Электронная почта" Value="baeva@asd.ru"/>
+		<Contact Type="Телефон" Value="+7 (495) 999-99-99, доб. 456"/>
+	</ManagerContacts>
+	<ManagerPhoto Description="07" Extension="png" FileUID="4fae1e22-58c7-11e8-a231-000c29e5886d" FileSizeDB="227819" CreationDate="2018-05-16 09:09:30" ModificationDate="2018-05-16 04:29:01" FileDeleted="no"/>
+	<PartnerContacts>
+		<Contact Type="Телефон" Value="+7 (495) 999-99-99, доб. 159"/>
+		<Contact Type="Мобильный телефон" Value="+7 (903) 777-77-77"/>
+		<Contact Type="Электронная почта" Value="test@aushan.ru"/>
+	</PartnerContacts>
+	<Contractors>
+		<Contractor UID="caacb6fe-f46c-11e7-b64b-3464a931ea12" ElementDeleted="no" LegalName="ООО &quot;АШАН&quot;" UrAdres="141031, Московская обл, Мытищи г, Осташковское ш, дом № 1" GruzAdres=""/>
+		<Contractor UID="caacb700-f46c-11e7-b64b-3464a931ea12" ElementDeleted="no" LegalName="ООО &quot;АШАН&quot;" UrAdres="141031, Московская обл, Мытищи г, Осташковское ш, дом № 1" GruzAdres="ООО &quot;АШАН&quot;, 141031, Московская обл, Мытищи г, Осташковское ш, дом № 1"/>
+		<Contractor UID="caacb702-f46c-11e7-b64b-3464a931ea12" ElementDeleted="no" LegalName="ООО &quot;АШАН&quot;" UrAdres="141031, Московская обл, Мытищи г, Осташковское ш, дом № 1" GruzAdres="ООО &quot;АШАН&quot;, 141031, Московская обл, Мытищи г, Осташковское ш, дом № 1"/>
+		<Contractor UID="caacb704-f46c-11e7-b64b-3464a931ea12" ElementDeleted="no" LegalName="ООО &quot;АШАН&quot;" UrAdres="141031, Московская обл, Мытищи г, Осташковское ш, дом № 1" GruzAdres="ООО &quot;АШАН&quot;, 141031, Московская обл, Мытищи г, Осташковское ш, дом № 1"/>
+		<Contractor UID="caacb706-f46c-11e7-b64b-3464a931ea12" ElementDeleted="no" LegalName="ООО &quot;АШАН&quot;" UrAdres="141031, Московская обл, Мытищи г, Осташковское ш, дом № 1" GruzAdres="ООО &quot;АШАН&quot;, 141031, Московская обл, Мытищи г, Осташковское ш, дом № 1"/>
+		<Contractor UID="caacb708-f46c-11e7-b64b-3464a931ea12" ElementDeleted="no" LegalName="ООО &quot;АШАН&quot;" UrAdres="141031, Московская обл, Мытищи г, Осташковское ш, дом № 1" GruzAdres="ООО &quot;АШАН&quot;, 141031, Московская обл, Мытищи г, Осташковское ш, дом № 1"/>
+		<Contractor UID="caacb70a-f46c-11e7-b64b-3464a931ea12" ElementDeleted="no" LegalName="ООО &quot;АШАН&quot;" UrAdres="141031, Московская обл, Мытищи г, Осташковское ш, дом № 1" GruzAdres="ООО &quot;АШАН&quot;, 141031, Московская обл, Мытищи г, Осташковское ш, дом № 1"/>
+		<Contractor UID="caacb70c-f46c-11e7-b64b-3464a931ea12" ElementDeleted="no" LegalName="ООО &quot;АШАН&quot;" UrAdres="141031, Московская обл, Мытищи г, Осташковское ш, дом № 1" GruzAdres=""/>
+	</Contractors>
+</SiteDataExport>

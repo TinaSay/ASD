@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<GPN_SiteDataExport>
+    <Product Active="yes" Article="303-005"
+             PrintName="Двусторонняя клейкая лента AVIORA на ПП основе, 50 мм х 10 м, прозрачная"
+             SiteName="Двусторонняя клейкая лента AVIORA на ПП основе, 50 мм х 10 м, прозрачная" ProductSummary=""
+             ProductFullDescription="" Weight="0,124" BoxQuantity="36" Unit="рул" BestBefore="не ограничен"
+             BoxLenght="31" BoxWidth="22" BoxHeight="32" UID="f7ed6a20-f456-11e7-b64b-3464a931ea12" ElementDeleted="no"
+             Brand="AVIORA" BrandUID="f7ed6a1f-f456-11e7-b64b-3464a931ea12" Section="Aviora"
+             SectionUID="a794a0af-08e6-11e8-b287-5442497078ec">
+        <ClientCategories>
+            <ClientCategory Name="Бизнес и производство" UID="99e73807-09ba-11e8-b287-5442497078ec"/>
+            <ClientCategory Name="Розничный покупатель" UID="b23e8f5d-09b9-11e8-b287-5442497078ec"/>
+        </ClientCategories>
+        <Usages>
+            <Usage Name="Для ванны" UID="be4198c3-09b7-11e8-b287-5442497078ec"/>
+            <Usage Name="Для кухни" UID="be4198c2-09b7-11e8-b287-5442497078ec"/>
+        </Usages>
+        <Advantages>
+            <Advantage Name="Преимущество1"/>
+            <Advantage Name="Преимущество2"/>
+        </Advantages>
+        <ProductVideos>
+            <ProductVideo Name="https://www.youtube.com/watch?v=7Ha1TzpGg5E"/>
+        </ProductVideos>
+        <AdditionalParams>
+            <AddParam Param="пар1" Value="зн1"/>
+            <AddParam Param="пар2" Value="зн2"/>
+        </AdditionalParams>
+        <RelatedProducts>
+            <RelatedProduct Product="Удалитель клея антиклей, СЕКУНДА, на инд. блистере, шоу-бокс, 24 /144"
+                            Article="403-052" UID="fdf59b1e-f456-11e7-b64b-3464a931ea12"/>
+            <RelatedProduct Product=".Изолента_15мм*20м синяя AVIORA /5 /200" Article="305-005"
+                            UID="fdf59ab5-f456-11e7-b64b-3464a931ea12"/>
+        </RelatedProducts>
+    </Product>
+</GPN_SiteDataExport>

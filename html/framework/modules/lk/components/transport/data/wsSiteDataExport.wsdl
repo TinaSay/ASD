@@ -1,0 +1,447 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:soap12bind="http://schemas.xmlsoap.org/wsdl/soap12/"
+             xmlns:soapbind="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://www.1c.ru/docmng"
+             xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy"
+             xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"
+             xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsd1="http://www.1c.ru/docmng" name="ВыгрузкаДляСайта"
+             targetNamespace="http://www.1c.ru/docmng">
+    <types>
+        <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xs1="http://www.1c.ru/docmng"
+                   targetNamespace="http://www.1c.ru/docmng" attributeFormDefault="unqualified"
+                   elementFormDefault="qualified">
+            <xs:complexType name="File">
+                <xs:sequence>
+                    <xs:element name="Code" type="xs:string"/>
+                    <xs:element name="Name" type="xs:string"/>
+                    <xs:element name="Extension" type="xs:string"/>
+                    <xs:element name="BinaryData" type="xs:base64Binary" minOccurs="0"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="FileList">
+                <xs:sequence>
+                    <xs:element name="Files" type="tns:ShortFileInfo" minOccurs="0" maxOccurs="unbounded"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="Folder">
+                <xs:sequence>
+                    <xs:element name="Code" type="xs:string"/>
+                    <xs:element name="Name" type="xs:string"/>
+                    <xs:element name="Description" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="ShortFileInfo">
+                <xs:sequence>
+                    <xs:element name="Code" type="xs:string"/>
+                    <xs:element name="Name" type="xs:string"/>
+                    <xs:element name="Extension" type="xs:string"/>
+                    <xs:element name="Description" type="xs:string"/>
+                    <xs:element name="Size" type="xs:long"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="GetReferences">
+                <xs:complexType>
+                    <xs:sequence/>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="GetReferencesResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="return" type="tns:File"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="GetFile">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="FileUID" type="xs:string"/>
+                        <xs:element name="FileType" type="xs:string"/>
+                        <xs:element name="FileName" type="xs:string" nillable="true"/>
+                        <xs:element name="FileExtension" type="xs:string" nillable="true"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="GetFileResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="return" type="tns:File"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="GetProduct">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="ProductUID" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="GetProductResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="return" type="tns:File"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="GetUser">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="Login" type="xs:string"/>
+                        <xs:element name="Password" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="GetUserResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="return" type="tns:File"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="GetPriceList">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="ContractorUID" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="GetPriceListResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="return" type="tns:File"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="GetPriceReminders">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="ContractorUID" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="GetPriceRemindersResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="return" type="tns:File"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="CreateOrder">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="Parameters" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="CreateOrderResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="return" type="tns:File"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="GetOrders">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="PartnerUID" type="xs:string"/>
+                        <xs:element name="OrderUID" type="xs:string" nillable="true"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="GetOrdersResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="return" type="tns:File"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="GetOrderDocs">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="OrderUID" type="xs:string" nillable="true"/>
+                        <xs:element name="DocType" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="GetOrderDocsResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="return" type="tns:File"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:schema>
+    </types>
+    <message name="GetReferencesRequestMessage">
+        <part name="parameters" element="tns:GetReferences"/>
+    </message>
+    <message name="GetReferencesResponseMessage">
+        <part name="parameters" element="tns:GetReferencesResponse"/>
+    </message>
+    <message name="GetFileRequestMessage">
+        <part name="parameters" element="tns:GetFile"/>
+    </message>
+    <message name="GetFileResponseMessage">
+        <part name="parameters" element="tns:GetFileResponse"/>
+    </message>
+    <message name="GetProductRequestMessage">
+        <part name="parameters" element="tns:GetProduct"/>
+    </message>
+    <message name="GetProductResponseMessage">
+        <part name="parameters" element="tns:GetProductResponse"/>
+    </message>
+    <message name="GetUserRequestMessage">
+        <part name="parameters" element="tns:GetUser"/>
+    </message>
+    <message name="GetUserResponseMessage">
+        <part name="parameters" element="tns:GetUserResponse"/>
+    </message>
+    <message name="GetPriceListRequestMessage">
+        <part name="parameters" element="tns:GetPriceList"/>
+    </message>
+    <message name="GetPriceListResponseMessage">
+        <part name="parameters" element="tns:GetPriceListResponse"/>
+    </message>
+    <message name="GetPriceRemindersRequestMessage">
+        <part name="parameters" element="tns:GetPriceReminders"/>
+    </message>
+    <message name="GetPriceRemindersResponseMessage">
+        <part name="parameters" element="tns:GetPriceRemindersResponse"/>
+    </message>
+    <message name="CreateOrderRequestMessage">
+        <part name="parameters" element="tns:CreateOrder"/>
+    </message>
+    <message name="CreateOrderResponseMessage">
+        <part name="parameters" element="tns:CreateOrderResponse"/>
+    </message>
+    <message name="GetOrdersRequestMessage">
+        <part name="parameters" element="tns:GetOrders"/>
+    </message>
+    <message name="GetOrdersResponseMessage">
+        <part name="parameters" element="tns:GetOrdersResponse"/>
+    </message>
+    <message name="GetOrderDocsRequestMessage">
+        <part name="parameters" element="tns:GetOrderDocs"/>
+    </message>
+    <message name="GetOrderDocsResponseMessage">
+        <part name="parameters" element="tns:GetOrderDocsResponse"/>
+    </message>
+    <portType name="ВыгрузкаДляСайтаPortType">
+        <operation name="GetReferences">
+            <input message="tns:GetReferencesRequestMessage"/>
+            <output message="tns:GetReferencesResponseMessage"/>
+        </operation>
+        <operation name="GetFile">
+            <input message="tns:GetFileRequestMessage"/>
+            <output message="tns:GetFileResponseMessage"/>
+        </operation>
+        <operation name="GetProduct">
+            <input message="tns:GetProductRequestMessage"/>
+            <output message="tns:GetProductResponseMessage"/>
+        </operation>
+        <operation name="GetUser">
+            <input message="tns:GetUserRequestMessage"/>
+            <output message="tns:GetUserResponseMessage"/>
+        </operation>
+        <operation name="GetPriceList">
+            <input message="tns:GetPriceListRequestMessage"/>
+            <output message="tns:GetPriceListResponseMessage"/>
+        </operation>
+        <operation name="GetPriceReminders">
+            <input message="tns:GetPriceRemindersRequestMessage"/>
+            <output message="tns:GetPriceRemindersResponseMessage"/>
+        </operation>
+        <operation name="CreateOrder">
+            <input message="tns:CreateOrderRequestMessage"/>
+            <output message="tns:CreateOrderResponseMessage"/>
+        </operation>
+        <operation name="GetOrders">
+            <input message="tns:GetOrdersRequestMessage"/>
+            <output message="tns:GetOrdersResponseMessage"/>
+        </operation>
+        <operation name="GetOrderDocs">
+            <input message="tns:GetOrderDocsRequestMessage"/>
+            <output message="tns:GetOrderDocsResponseMessage"/>
+        </operation>
+    </portType>
+    <binding name="ВыгрузкаДляСайтаSoapBinding" type="tns:ВыгрузкаДляСайтаPortType">
+        <soapbind:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <operation name="GetReferences">
+            <soapbind:operation style="document" soapAction="http://www.1c.ru/docmng#ВыгрузкаДляСайта:GetReferences"/>
+            <input>
+                <soapbind:body use="literal"/>
+            </input>
+            <output>
+                <soapbind:body use="literal"/>
+            </output>
+        </operation>
+        <operation name="GetFile">
+            <soapbind:operation style="document" soapAction="http://www.1c.ru/docmng#ВыгрузкаДляСайта:GetFile"/>
+            <input>
+                <soapbind:body use="literal"/>
+            </input>
+            <output>
+                <soapbind:body use="literal"/>
+            </output>
+        </operation>
+        <operation name="GetProduct">
+            <soapbind:operation style="document" soapAction="http://www.1c.ru/docmng#ВыгрузкаДляСайта:GetProduct"/>
+            <input>
+                <soapbind:body use="literal"/>
+            </input>
+            <output>
+                <soapbind:body use="literal"/>
+            </output>
+        </operation>
+        <operation name="GetUser">
+            <soapbind:operation style="document" soapAction="http://www.1c.ru/docmng#ВыгрузкаДляСайта:GetUser"/>
+            <input>
+                <soapbind:body use="literal"/>
+            </input>
+            <output>
+                <soapbind:body use="literal"/>
+            </output>
+        </operation>
+        <operation name="GetPriceList">
+            <soapbind:operation style="document" soapAction="http://www.1c.ru/docmng#ВыгрузкаДляСайта:GetPriceList"/>
+            <input>
+                <soapbind:body use="literal"/>
+            </input>
+            <output>
+                <soapbind:body use="literal"/>
+            </output>
+        </operation>
+        <operation name="GetPriceReminders">
+            <soapbind:operation style="document"
+                                soapAction="http://www.1c.ru/docmng#ВыгрузкаДляСайта:GetPriceReminders"/>
+            <input>
+                <soapbind:body use="literal"/>
+            </input>
+            <output>
+                <soapbind:body use="literal"/>
+            </output>
+        </operation>
+        <operation name="CreateOrder">
+            <soapbind:operation style="document" soapAction="http://www.1c.ru/docmng#ВыгрузкаДляСайта:CreateOrder"/>
+            <input>
+                <soapbind:body use="literal"/>
+            </input>
+            <output>
+                <soapbind:body use="literal"/>
+            </output>
+        </operation>
+        <operation name="GetOrders">
+            <soapbind:operation style="document" soapAction="http://www.1c.ru/docmng#ВыгрузкаДляСайта:GetOrders"/>
+            <input>
+                <soapbind:body use="literal"/>
+            </input>
+            <output>
+                <soapbind:body use="literal"/>
+            </output>
+        </operation>
+        <operation name="GetOrderDocs">
+            <soapbind:operation style="document" soapAction="http://www.1c.ru/docmng#ВыгрузкаДляСайта:GetOrderDocs"/>
+            <input>
+                <soapbind:body use="literal"/>
+            </input>
+            <output>
+                <soapbind:body use="literal"/>
+            </output>
+        </operation>
+    </binding>
+    <binding name="ВыгрузкаДляСайтаSoap12Binding" type="tns:ВыгрузкаДляСайтаPortType">
+        <soap12bind:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <operation name="GetReferences">
+            <soap12bind:operation style="document" soapAction="http://www.1c.ru/docmng#ВыгрузкаДляСайта:GetReferences"/>
+            <input>
+                <soap12bind:body use="literal"/>
+            </input>
+            <output>
+                <soap12bind:body use="literal"/>
+            </output>
+        </operation>
+        <operation name="GetFile">
+            <soap12bind:operation style="document" soapAction="http://www.1c.ru/docmng#ВыгрузкаДляСайта:GetFile"/>
+            <input>
+                <soap12bind:body use="literal"/>
+            </input>
+            <output>
+                <soap12bind:body use="literal"/>
+            </output>
+        </operation>
+        <operation name="GetProduct">
+            <soap12bind:operation style="document" soapAction="http://www.1c.ru/docmng#ВыгрузкаДляСайта:GetProduct"/>
+            <input>
+                <soap12bind:body use="literal"/>
+            </input>
+            <output>
+                <soap12bind:body use="literal"/>
+            </output>
+        </operation>
+        <operation name="GetUser">
+            <soap12bind:operation style="document" soapAction="http://www.1c.ru/docmng#ВыгрузкаДляСайта:GetUser"/>
+            <input>
+                <soap12bind:body use="literal"/>
+            </input>
+            <output>
+                <soap12bind:body use="literal"/>
+            </output>
+        </operation>
+        <operation name="GetPriceList">
+            <soap12bind:operation style="document" soapAction="http://www.1c.ru/docmng#ВыгрузкаДляСайта:GetPriceList"/>
+            <input>
+                <soap12bind:body use="literal"/>
+            </input>
+            <output>
+                <soap12bind:body use="literal"/>
+            </output>
+        </operation>
+        <operation name="GetPriceReminders">
+            <soap12bind:operation style="document"
+                                  soapAction="http://www.1c.ru/docmng#ВыгрузкаДляСайта:GetPriceReminders"/>
+            <input>
+                <soap12bind:body use="literal"/>
+            </input>
+            <output>
+                <soap12bind:body use="literal"/>
+            </output>
+        </operation>
+        <operation name="CreateOrder">
+            <soap12bind:operation style="document" soapAction="http://www.1c.ru/docmng#ВыгрузкаДляСайта:CreateOrder"/>
+            <input>
+                <soap12bind:body use="literal"/>
+            </input>
+            <output>
+                <soap12bind:body use="literal"/>
+            </output>
+        </operation>
+        <operation name="GetOrders">
+            <soap12bind:operation style="document" soapAction="http://www.1c.ru/docmng#ВыгрузкаДляСайта:GetOrders"/>
+            <input>
+                <soap12bind:body use="literal"/>
+            </input>
+            <output>
+                <soap12bind:body use="literal"/>
+            </output>
+        </operation>
+        <operation name="GetOrderDocs">
+            <soap12bind:operation style="document" soapAction="http://www.1c.ru/docmng#ВыгрузкаДляСайта:GetOrderDocs"/>
+            <input>
+                <soap12bind:body use="literal"/>
+            </input>
+            <output>
+                <soap12bind:body use="literal"/>
+            </output>
+        </operation>
+    </binding>
+    <service name="ВыгрузкаДляСайта">
+        <port name="ВыгрузкаДляСайтаSoap" binding="tns:ВыгрузкаДляСайтаSoapBinding">
+            <documentation>
+                <wsi:Claim xmlns:wsi="http://ws-i.org/schemas/conformanceClaim/"
+                           conformsTo="http://ws-i.org/profiles/basic/1.1"/>
+            </documentation>
+            <soapbind:address location="http://178.213.10.137/ASD_UT/ws/wsSiteDataExport.1cws"/>
+        </port>
+        <port name="ВыгрузкаДляСайтаSoap12" binding="tns:ВыгрузкаДляСайтаSoap12Binding">
+            <soap12bind:address location="http://178.213.10.137/ASD_UT/ws/wsSiteDataExport.1cws"/>
+        </port>
+    </service>
+</definitions>

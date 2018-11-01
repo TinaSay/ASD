@@ -1,0 +1,36 @@
+AddDefaultCharset utf-8
+
+<IfModule mod_autoindex.c>
+    Options -Indexes
+</IfModule>
+
+<IfModule mod_rewrite.c>
+    Options +FollowSymLinks
+
+    RewriteEngine on
+
+    RewriteCond %{HTTP_HOST} ^www\.(.*)$
+    RewriteRule ^(.*)$ http://%1/$1 [L,R=301]
+
+    # If a directory or a file exists, use it directly
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+
+    # Otherwise forward it to index.php
+    RewriteRule . index.php
+</IfModule>
+
+<IfModule mod_expires.c>
+    # Enables generation of Expires headers
+    ExpiresActive On
+
+    # The validity of the documents 1 month after access
+    ExpiresDefault "access plus 1 month"
+
+    # The validity of the html documents 3 seconds after access
+    ExpiresByType text/html "access plus 3 seconds"
+</IfModule>
+
+<IfModule mod_alias.c>
+    RedirectMatch 403 /\.
+</IfModule>

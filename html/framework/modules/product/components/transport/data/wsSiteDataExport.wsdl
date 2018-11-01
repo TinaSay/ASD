@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:soap12bind="http://schemas.xmlsoap.org/wsdl/soap12/"
+             xmlns:soapbind="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://www.1c.ru/docmng"
+             name="ВыгрузкаДляСайта" targetNamespace="http://www.1c.ru/docmng">
+    <types>
+        <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.1c.ru/docmng"
+                   attributeFormDefault="unqualified" elementFormDefault="qualified">
+            <xs:complexType name="File">
+                <xs:sequence>
+                    <xs:element name="Code" type="xs:string"/>
+                    <xs:element name="Name" type="xs:string"/>
+                    <xs:element name="Extension" type="xs:string"/>
+                    <xs:element name="BinaryData" type="xs:base64Binary" minOccurs="0"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="FileList">
+                <xs:sequence>
+                    <xs:element name="Files" type="tns:ShortFileInfo" minOccurs="0" maxOccurs="unbounded"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="Folder">
+                <xs:sequence>
+                    <xs:element name="Code" type="xs:string"/>
+                    <xs:element name="Name" type="xs:string"/>
+                    <xs:element name="Description" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="ShortFileInfo">
+                <xs:sequence>
+                    <xs:element name="Code" type="xs:string"/>
+                    <xs:element name="Name" type="xs:string"/>
+                    <xs:element name="Extension" type="xs:string"/>
+                    <xs:element name="Description" type="xs:string"/>
+                    <xs:element name="Size" type="xs:long"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="GetReferences">
+                <xs:complexType>
+                    <xs:sequence/>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="GetReferencesResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="return" type="tns:File"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="GetFile">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="FileUID" type="xs:string"/>
+                        <xs:element name="FileType" type="xs:string"/>
+                        <xs:element name="FileName" type="xs:string" nillable="true"/>
+                        <xs:element name="FileExtension" type="xs:string" nillable="true"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="GetFileResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="return" type="tns:File"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="GetProduct">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="ProductUID" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="GetProductResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="return" type="tns:File"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:schema>
+    </types>
+    <message name="GetReferencesRequestMessage">
+        <part name="parameters" element="tns:GetReferences"/>
+    </message>
+    <message name="GetReferencesResponseMessage">
+        <part name="parameters" element="tns:GetReferencesResponse"/>
+    </message>
+    <message name="GetFileRequestMessage">
+        <part name="parameters" element="tns:GetFile"/>
+    </message>
+    <message name="GetFileResponseMessage">
+        <part name="parameters" element="tns:GetFileResponse"/>
+    </message>
+    <message name="GetProductRequestMessage">
+        <part name="parameters" element="tns:GetProduct"/>
+    </message>
+    <message name="GetProductResponseMessage">
+        <part name="parameters" element="tns:GetProductResponse"/>
+    </message>
+    <portType name="ВыгрузкаДляСайтаPortType">
+        <operation name="GetReferences">
+            <input message="tns:GetReferencesRequestMessage"/>
+            <output message="tns:GetReferencesResponseMessage"/>
+        </operation>
+        <operation name="GetFile">
+            <input message="tns:GetFileRequestMessage"/>
+            <output message="tns:GetFileResponseMessage"/>
+        </operation>
+        <operation name="GetProduct">
+            <input message="tns:GetProductRequestMessage"/>
+            <output message="tns:GetProductResponseMessage"/>
+        </operation>
+    </portType>
+    <binding name="ВыгрузкаДляСайтаSoapBinding" type="tns:ВыгрузкаДляСайтаPortType">
+        <soapbind:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <operation name="GetReferences">
+            <soapbind:operation style="document" soapAction="http://www.1c.ru/docmng#ВыгрузкаДляСайта:GetReferences"/>
+            <input>
+                <soapbind:body use="literal"/>
+            </input>
+            <output>
+                <soapbind:body use="literal"/>
+            </output>
+        </operation>
+        <operation name="GetFile">
+            <soapbind:operation style="document" soapAction="http://www.1c.ru/docmng#ВыгрузкаДляСайта:GetFile"/>
+            <input>
+                <soapbind:body use="literal"/>
+            </input>
+            <output>
+                <soapbind:body use="literal"/>
+            </output>
+        </operation>
+        <operation name="GetProduct">
+            <soapbind:operation style="document" soapAction="http://www.1c.ru/docmng#ВыгрузкаДляСайта:GetProduct"/>
+            <input>
+                <soapbind:body use="literal"/>
+            </input>
+            <output>
+                <soapbind:body use="literal"/>
+            </output>
+        </operation>
+    </binding>
+    <binding name="ВыгрузкаДляСайтаSoap12Binding" type="tns:ВыгрузкаДляСайтаPortType">
+        <soap12bind:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <operation name="GetReferences">
+            <soap12bind:operation style="document" soapAction="http://www.1c.ru/docmng#ВыгрузкаДляСайта:GetReferences"/>
+            <input>
+                <soap12bind:body use="literal"/>
+            </input>
+            <output>
+                <soap12bind:body use="literal"/>
+            </output>
+        </operation>
+        <operation name="GetFile">
+            <soap12bind:operation style="document" soapAction="http://www.1c.ru/docmng#ВыгрузкаДляСайта:GetFile"/>
+            <input>
+                <soap12bind:body use="literal"/>
+            </input>
+            <output>
+                <soap12bind:body use="literal"/>
+            </output>
+        </operation>
+        <operation name="GetProduct">
+            <soap12bind:operation style="document" soapAction="http://www.1c.ru/docmng#ВыгрузкаДляСайта:GetProduct"/>
+            <input>
+                <soap12bind:body use="literal"/>
+            </input>
+            <output>
+                <soap12bind:body use="literal"/>
+            </output>
+        </operation>
+    </binding>
+    <service name="ВыгрузкаДляСайта">
+        <port name="ВыгрузкаДляСайтаSoap" binding="tns:ВыгрузкаДляСайтаSoapBinding">
+            <documentation>
+                <wsi:Claim xmlns:wsi="http://ws-i.org/schemas/conformanceClaim/"
+                           conformsTo="http://ws-i.org/profiles/basic/1.1"/>
+            </documentation>
+            <soapbind:address location="http://85.90.123.98/trade/ws/wsSiteDataExport.1cws"/>
+        </port>
+        <port name="ВыгрузкаДляСайтаSoap12" binding="tns:ВыгрузкаДляСайтаSoap12Binding">
+            <soap12bind:address location="http://85.90.123.98/trade/ws/wsSiteDataExport.1cws"/>
+        </port>
+    </service>
+</definitions>

@@ -1,0 +1,59 @@
+.breadcrumbs li > span:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    margin-top: -4px;
+    width: 10px;
+    height: 10px;
+    background: #f8c901;
+    border-radius: 10px;
+    right: 0;
+}
+
+.breadcrumbs li > span {
+    cursor: pointer;
+    font-size: 16px;
+    font-size: 1.6rem;
+    position: relative;
+    padding-right: 35px;
+    display: inline-block;
+    color: #00509f;
+}
+
+.tab-pane {
+    display: none;
+}
+
+.tab-pane.active {
+    display: block;
+}
+
+section.padded-banner-list {
+    padding-bottom: 1rem;
+}
+
+section.padded-banner-list-6rem {
+    padding-bottom: 6rem;
+}
+
+img.item-image-list {
+    border: 1px solid #ededed;
+    margin: 2px;
+}
+
+.no-border {
+    border: none; /*!important;*/
+}
+
+.no-padding {
+    padding: 0;
+}
+
+.no-margin {
+    margin: 0;
+}
+
+.title-uppercase {
+    text-transform: uppercase;
+    font-size: 2.2rem;
+}

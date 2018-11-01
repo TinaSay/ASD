@@ -1,0 +1,29 @@
+image: runner:latest
+stages:
+    - deploy
+before_script:
+    - 'which sshpass || ( apt-get update -y && apt-get install sshpass -y )'
+    - mkdir -p ~/.ssh
+    - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
+    - composer self-update
+    #- composer global require "fxp/composer-asset-plugin:~1.1.1" --no-interaction
+    - cd ./html/framework && composer install --prefer-dist --no-interaction --no-progress --ignore-platform-reqs && cd ../../
+dev:
+    stage: deploy
+    environment: dev
+    script:
+        - sshpass -p $SSH_PASSWORD rsync -riz --delete -e "ssh" --exclude-from="exclude.txt" . $SSH_USERNAME@$SSH_HOST:$SSH_DIRECTORY
+        - sshpass -p $SSH_PASSWORD ssh $SSH_USERNAME@$SSH_HOST "cd $SSH_DIRECTORY && ./docker-mysql-backup -c asddevvpsru_mysql_1"
+        - sshpass -p $SSH_PASSWORD ssh $SSH_USERNAME@$SSH_HOST "cd $SSH_DIRECTORY && ./docker-cron /root/cron/tabs"
+        - sshpass -p $SSH_PASSWORD ssh $SSH_USERNAME@$SSH_HOST "cd $SSH_DIRECTORY && ./docker-exec framework/yii migrate/up"
+        - sshpass -p $SSH_PASSWORD ssh $SSH_USERNAME@$SSH_HOST "cd $SSH_DIRECTORY && ./docker-exec framework/yii access/install"
+        - sshpass -p $SSH_PASSWORD ssh $SSH_USERNAME@$SSH_HOST "cd $SSH_DIRECTORY && ./docker-exec framework/yii cache/flush-all"
+    only:
+        - master
+production:
+    stage: deploy
+    environment: production
+    script:
+        - ls -l html
+    only:
+        - production

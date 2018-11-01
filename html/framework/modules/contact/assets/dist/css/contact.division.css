@@ -1,0 +1,54 @@
+.bg-orange-metro {
+    background-color: #fff3e2;
+}
+
+.bg-green-metro {
+    background-color: #f4fffa;
+}
+
+.field-division-metro-log {
+    margin-right: 15px;
+}
+
+.field-division-metro-log .btn {
+    margin-top: 25px;
+    height: 40px;
+    padding-top: 7px;
+}
+
+.field-division-metro-log {
+    float: left;
+}
+
+.field-division-requisite-widget {
+    margin-bottom: 15px;
+}
+
+.field-division-requisite-widget input {
+    float: left;
+    margin-right: 15px;
+}
+
+.field-division-requisite-widget input.form-control {
+    float: left;
+    margin-right: 15px;
+    margin-left: -15px;
+    width: 260px;
+    height: 25px;
+}
+
+.field-division-requisite-widget .btn {
+    float: left;
+    margin-right: 15px;
+    height: 25px;
+    font-size: 12px;
+    padding-top: 2px;
+}
+
+#requisite-holder {
+    margin-top: -15px;
+}
+
+#requisite-holder div.container {
+    margin-bottom: 15px;
+}

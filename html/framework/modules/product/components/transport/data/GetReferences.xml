@@ -1,0 +1,251 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<SiteDataExport>
+    <Brands>
+        <Brand Name="AVIORA" BrandDescription="" BrandFullDescription="" Position="0"
+               UID="f7ed6a1f-f456-11e7-b64b-3464a931ea12" ElementDeleted="no">
+            <Files/>
+        </Brand>
+        <Brand Name="Секунда" BrandDescription="" BrandFullDescription="" Position="0"
+               UID="fdf59ae5-f456-11e7-b64b-3464a931ea12" ElementDeleted="no">
+            <Files/>
+        </Brand>
+        <Brand Name="AVIORA МОНОЛИТ" BrandDescription="" BrandFullDescription="" Position="0"
+               UID="fdf59b2f-f456-11e7-b64b-3464a931ea12" ElementDeleted="no">
+            <Files/>
+        </Brand>
+        <Brand Name="Paterra" BrandDescription="Paterra - краткое описание" BrandFullDescription="Paterra - полное описание
+строка 2 полного описания" Position="1" UID="fdf59b3e-f456-11e7-b64b-3464a931ea12" ElementDeleted="no">
+            <Files/>
+        </Brand>
+        <Brand Name="Горница" BrandDescription="" BrandFullDescription="" Position="0"
+               UID="1aa6ba47-f457-11e7-b64b-3464a931ea12" ElementDeleted="no">
+            <Files/>
+        </Brand>
+        <Brand Name="Пикничок" BrandDescription="" BrandFullDescription="" Position="0"
+               UID="1aa6ba83-f457-11e7-b64b-3464a931ea12" ElementDeleted="no">
+            <Files/>
+        </Brand>
+        <Brand Name="ДЕСНОГОР" BrandDescription="" BrandFullDescription="" Position="0"
+               UID="35a1ec5e-f457-11e7-b64b-3464a931ea12" ElementDeleted="no">
+            <Files/>
+        </Brand>
+    </Brands>
+    <Sections>
+        <Section Name="Аксессуары для отдыха" ParentUID="00000000-0000-0000-0000-000000000000" Position="0"
+                 UID="49d714d6-1717-11e8-a22d-d0946606ab89" ElementDeleted="no"
+                 BrandUID="1aa6ba83-f457-11e7-b64b-3464a931ea12"/>
+        <Section Name="Алюминиевые ленты " ParentUID="00000000-0000-0000-0000-000000000000" Position="0"
+                 UID="64b9f970-171a-11e8-a22d-d0946606ab89" ElementDeleted="no"
+                 BrandUID="f7ed6a1f-f456-11e7-b64b-3464a931ea12"/>
+        <Section Name="Двусторонние ленты " ParentUID="00000000-0000-0000-0000-000000000000" Position="0"
+                 UID="69065750-1711-11e8-a22d-d0946606ab89" ElementDeleted="no"
+                 BrandUID="f7ed6a1f-f456-11e7-b64b-3464a931ea12"/>
+        <Section Name="Для кухни" ParentUID="00000000-0000-0000-0000-000000000000" Position="0"
+                 UID="54b83fcf-1713-11e8-a22d-d0946606ab89" ElementDeleted="no"
+                 BrandUID="fdf59b3e-f456-11e7-b64b-3464a931ea12"/>
+        <Section Name="Для сервировки стола" ParentUID="00000000-0000-0000-0000-000000000000" Position="0"
+                 UID="b1b6752f-1714-11e8-a22d-d0946606ab89" ElementDeleted="no"
+                 BrandUID="fdf59b3e-f456-11e7-b64b-3464a931ea12"/>
+        <Section Name="Для ухода за одеждой и обувью" ParentUID="00000000-0000-0000-0000-000000000000" Position="0"
+                 UID="fa2c16e4-1713-11e8-a22d-d0946606ab89" ElementDeleted="no"
+                 BrandUID="fdf59b3e-f456-11e7-b64b-3464a931ea12"/>
+        <Section Name="Моментальные клеи" ParentUID="00000000-0000-0000-0000-000000000000" Position="0"
+                 UID="9ba3dce4-21ea-11e8-a22e-d0946606ab89" ElementDeleted="no"
+                 BrandUID="fdf59b2f-f456-11e7-b64b-3464a931ea12"/>
+        <Section Name="Жаровни и мангалы" ParentUID="9ba3dce4-21ea-11e8-a22e-d0946606ab89" Position="0"
+                 UID="23c3929a-170c-11e8-a22d-d0946606ab89" ElementDeleted="no"
+                 BrandUID="1aa6ba83-f457-11e7-b64b-3464a931ea12"/>
+        <Section Name="Решетки-гриль" ParentUID="00000000-0000-0000-0000-000000000000" Position="0"
+                 UID="4234b100-1711-11e8-a22d-d0946606ab89" ElementDeleted="no"
+                 BrandUID="1aa6ba83-f457-11e7-b64b-3464a931ea12"/>
+        <Section Name="Сантехнические ленты " ParentUID="00000000-0000-0000-0000-000000000000" Position="0"
+                 UID="0ca10203-1717-11e8-a22d-d0946606ab89" ElementDeleted="no"
+                 BrandUID="f7ed6a1f-f456-11e7-b64b-3464a931ea12"/>
+        <Section Name="Сигнальные клейкие ленты " ParentUID="00000000-0000-0000-0000-000000000000" Position="0"
+                 UID="b2bcc0f0-171b-11e8-a22d-d0946606ab89" ElementDeleted="no"
+                 BrandUID="f7ed6a1f-f456-11e7-b64b-3464a931ea12"/>
+        <Section Name="Сопутствующие товары " ParentUID="00000000-0000-0000-0000-000000000000" Position="0"
+                 UID="29c78034-171d-11e8-a22d-d0946606ab89" ElementDeleted="no"
+                 BrandUID="f7ed6a1f-f456-11e7-b64b-3464a931ea12"/>
+        <Section Name="Средства для розжига" ParentUID="00000000-0000-0000-0000-000000000000" Position="0"
+                 UID="6d1b3525-1716-11e8-a22d-d0946606ab89" ElementDeleted="no"
+                 BrandUID="1aa6ba83-f457-11e7-b64b-3464a931ea12"/>
+        <Section Name="Универсальные клеи" ParentUID="00000000-0000-0000-0000-000000000000" Position="0"
+                 UID="b647f17e-21e5-11e8-a22e-d0946606ab89" ElementDeleted="no"
+                 BrandUID="fdf59ae5-f456-11e7-b64b-3464a931ea12"/>
+        <Section Name="Шампуры" ParentUID="00000000-0000-0000-0000-000000000000" Position="0"
+                 UID="124c7519-1715-11e8-a22d-d0946606ab89" ElementDeleted="no"
+                 BrandUID="1aa6ba83-f457-11e7-b64b-3464a931ea12"/>
+    </Sections>
+    <Usages>
+        <Usage Name="Для отдыха на природе" Position="0" UID="468e2096-1710-11e8-a22d-d0946606ab89" ElementDeleted="no">
+            <Files/>
+        </Usage>
+        <Usage Name="Для строительства и ремонта" Position="0" UID="7aa914af-1712-11e8-a22d-d0946606ab89"
+               ElementDeleted="no">
+            <Files/>
+        </Usage>
+        <Usage Name="Для кухни" Position="0" UID="70c3de37-1713-11e8-a22d-d0946606ab89" ElementDeleted="no">
+            <Files/>
+        </Usage>
+        <Usage Name="Для ухода за одеждой и обувью" Position="0" UID="14b0c5ee-1714-11e8-a22d-d0946606ab89"
+               ElementDeleted="no">
+            <Files/>
+        </Usage>
+        <Usage Name="Для творчества и хобби" Position="0" UID="b823ff38-1714-11e8-a22d-d0946606ab89"
+               ElementDeleted="no">
+            <Files/>
+        </Usage>
+        <Usage Name="Для путешественников и автомобилистов" Position="0" UID="63b35f7a-1715-11e8-a22d-d0946606ab89"
+               ElementDeleted="no">
+            <Files/>
+        </Usage>
+        <Usage Name="Для детей и их родителей" Position="0" UID="970d914e-260c-11e8-a22e-d0946606ab89"
+               ElementDeleted="no">
+            <Files/>
+        </Usage>
+        <Usage Name="Для уборки" Position="0" UID="970d914f-260c-11e8-a22e-d0946606ab89" ElementDeleted="no">
+            <Files/>
+        </Usage>
+    </Usages>
+    <ClientCategories>
+        <ClientCategory Name="Розничный покупатель" Position="0" UID="e96d8a88-1710-11e8-a22d-d0946606ab89"
+                        ElementDeleted="no">
+            <Files/>
+        </ClientCategory>
+        <ClientCategory Name="Бизнес и производство" Position="0" UID="a4ec364d-1712-11e8-a22d-d0946606ab89"
+                        ElementDeleted="no">
+            <Files/>
+        </ClientCategory>
+    </ClientCategories>
+    <ActiveProducts>
+        <Product Article="303-005" ModificationDate="2018-03-12 15:05:46" UID="f7ed6a20-f456-11e7-b64b-3464a931ea12"
+                 ElementDeleted="no">
+            <Files>
+                <ProductPicture Description="1.jpg" Extension=".jpg" FileUID="d:\1.jpg" FileSizeDB="5160"
+                                CreationDate="" ModificationDate="2018-02-26 17:30:03" FileDeleted="no"/>
+                <ProductPicture Description="3.jpg" Extension=".jpg"
+                                FileUID="\\asd-files\common\для_Еремина_Алексея\1с\3.jpg" FileSizeDB="5908"
+                                CreationDate="" ModificationDate="2018-02-26 17:30:52" FileDeleted="no"/>
+                <ProductPicture Description="1.xml" Extension=".xml" FileUID="\\srv-sql\Alexander\1.xml"
+                                FileSizeDB="16703" CreationDate="" ModificationDate="2018-02-12 10:31:17"
+                                FileDeleted="no"/>
+                <ProductPicture Description="Зима.jpg" Extension=".jpg" FileUID="\\srv-sql\Alexander\Зима.jpg"
+                                FileSizeDB="105542" CreationDate="" ModificationDate="2006-03-02 15:00:00"
+                                FileDeleted="no"/>
+            </Files>
+        </Product>
+        <Product Article="303-013" ModificationDate="2018-02-22 15:14:15" UID="f7ed6a30-f456-11e7-b64b-3464a931ea12"
+                 ElementDeleted="no">
+            <Files/>
+        </Product>
+        <Product Article="302-033" ModificationDate="2018-02-22 15:14:45" UID="f7ed6a50-f456-11e7-b64b-3464a931ea12"
+                 ElementDeleted="no">
+            <Files/>
+        </Product>
+        <Product Article="302-047" ModificationDate="2018-02-22 15:15:16" UID="f7ed6a6f-f456-11e7-b64b-3464a931ea12"
+                 ElementDeleted="no">
+            <Files/>
+        </Product>
+        <Product Article="302-111" ModificationDate="2018-02-22 15:15:31" UID="f7ed6acc-f456-11e7-b64b-3464a931ea12"
+                 ElementDeleted="no">
+            <Files/>
+        </Product>
+        <Product Article="403-111" ModificationDate="2018-03-12 16:05:38" UID="fdf59b12-f456-11e7-b64b-3464a931ea12"
+                 ElementDeleted="no">
+            <Files/>
+        </Product>
+        <Product Article="403-197" ModificationDate="2018-03-07 14:22:18" UID="fdf59b20-f456-11e7-b64b-3464a931ea12"
+                 ElementDeleted="no">
+            <Files/>
+        </Product>
+        <Product Article="403-065" ModificationDate="2018-03-12 17:11:10" UID="fdf59b30-f456-11e7-b64b-3464a931ea12"
+                 ElementDeleted="no">
+            <Files/>
+        </Product>
+        <Product Article="403-066" ModificationDate="2018-03-12 16:06:10" UID="fdf59b31-f456-11e7-b64b-3464a931ea12"
+                 ElementDeleted="no">
+            <Files/>
+        </Product>
+        <Product Article="402-725" ModificationDate="2018-02-21 17:30:52" UID="fdf59b3f-f456-11e7-b64b-3464a931ea12"
+                 ElementDeleted="no">
+            <Files/>
+        </Product>
+        <Product Article="402-408" ModificationDate="2018-02-21 17:34:01" UID="0c50fd5e-f457-11e7-b64b-3464a931ea12"
+                 ElementDeleted="no">
+            <Files/>
+        </Product>
+        <Product Article="401-267" ModificationDate="2018-03-12 17:10:45" UID="1aa6ba89-f457-11e7-b64b-3464a931ea12"
+                 ElementDeleted="no">
+            <Files/>
+        </Product>
+        <Product Article="401-729" ModificationDate="2018-02-21 17:36:45" UID="1aa6baa5-f457-11e7-b64b-3464a931ea12"
+                 ElementDeleted="no">
+            <Files/>
+        </Product>
+        <Product Article="401-600" ModificationDate="2018-02-21 17:46:27" UID="1aa6bac3-f457-11e7-b64b-3464a931ea12"
+                 ElementDeleted="no">
+            <Files/>
+        </Product>
+        <Product Article="401-404" ModificationDate="2018-02-21 17:54:19" UID="1aa6badb-f457-11e7-b64b-3464a931ea12"
+                 ElementDeleted="no">
+            <Files/>
+        </Product>
+        <Product Article="401-408" ModificationDate="2018-02-21 18:14:51" UID="20c3f962-f457-11e7-b64b-3464a931ea12"
+                 ElementDeleted="no">
+            <Files/>
+        </Product>
+        <Product Article="403-214" ModificationDate="2018-03-12 16:06:57" UID="35a1ed17-f457-11e7-b64b-3464a931ea12"
+                 ElementDeleted="no">
+            <Files/>
+        </Product>
+        <Product Article="402-762" ModificationDate="2018-02-21 17:36:24" UID="3e00b711-f457-11e7-b64b-3464a931ea12"
+                 ElementDeleted="no">
+            <Files/>
+        </Product>
+        <Product Article="401-552" ModificationDate="2018-02-21 17:38:39" UID="3e00b732-f457-11e7-b64b-3464a931ea12"
+                 ElementDeleted="no">
+            <Files/>
+        </Product>
+        <Product Article="401-545" ModificationDate="2018-02-21 17:40:35" UID="53e0fefb-f457-11e7-b64b-3464a931ea12"
+                 ElementDeleted="no">
+            <Files/>
+        </Product>
+    </ActiveProducts>
+    <Promos>
+        <Promo Colour="" Name="Новинки" Position="0" UID="721bee94-1e11-11e8-a22e-d0946606ab89" ElementDeleted="no">
+            <PromoArticles>
+                <PromoArticle Article="303-005" UID="f7ed6a20-f456-11e7-b64b-3464a931ea12"/>
+            </PromoArticles>
+            <Files/>
+        </Promo>
+        <Promo Colour="" Name="Хиты продаж" Position="0" UID="4830de56-25fe-11e8-a22e-d0946606ab89" ElementDeleted="no">
+            <PromoArticles>
+                <PromoArticle Article="403-214" UID="35a1ed17-f457-11e7-b64b-3464a931ea12"/>
+            </PromoArticles>
+            <Files/>
+        </Promo>
+    </Promos>
+    <Sets>
+        <Set Category="Для небольших магазинов"
+             Description="Данный набо поможет Вам сделать отличное предложение всем типам клиентов, а значит - заработать дополнительную прибыль!"
+             Name="Простое решение для стенда на кассе!" Position="0" UID="fadb9c5d-1e04-11e8-a22e-d0946606ab89"
+             ElementDeleted="no">
+            <SetArticles>
+                <SetArticle Article="302-111" UID="f7ed6acc-f456-11e7-b64b-3464a931ea12" SetArticleQuantity="0"/>
+                <SetArticle Article="303-005" UID="f7ed6a20-f456-11e7-b64b-3464a931ea12" SetArticleQuantity="0"/>
+                <SetArticle Article="302-047" UID="f7ed6a6f-f456-11e7-b64b-3464a931ea12" SetArticleQuantity="0"/>
+            </SetArticles>
+            <SetVideos/>
+            <Files>
+                <SetPicture Description="403-107" Extension="jpg" FileUID="7035f08b-1e05-11e8-a22e-d0946606ab89"
+                            FileSizeDB="1071280" CreationDate="2018-03-02 13:35:35"
+                            ModificationDate="2017-01-16 10:21:01" FileDeleted="no"/>
+                <SetPresentation Description="стенд_Секунда-Авиора" Extension="pdf"
+                                 FileUID="76f6c338-1e05-11e8-a22e-d0946606ab89" FileSizeDB="662369"
+                                 CreationDate="2018-03-02 13:35:46" ModificationDate="2013-12-06 12:31:08"
+                                 FileDeleted="no"/>
+            </Files>
+        </Set>
+    </Sets>
+</SiteDataExport>
